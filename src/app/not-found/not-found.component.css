@@ -1,0 +1,16 @@
+.black{
+    background: #0C0C0C
+}
+.bg{
+    height: 70vh;
+    background: url('../assets/images/error.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pos{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,35 @@
+.card-body{
+    background-image: url("../assets/images/oceania.jpg");
+    height: 60vh;
+    color: white;
+    background-size: cover;
+    
+}
+
+.card-body1{
+    background-image: url("../assets/images/africa.jpg");
+    height: 60vh;
+    color: white;
+    
+}
+
+.card-body2{
+    background-image: url("../assets/images/asia.jpg");
+    height: 60vh;
+    color: white;
+    
+}
+
+.card-body3{
+    background-image: url("../assets/images/america.jpg");
+    height: 60vh;
+    color: white;
+    background-size: cover;
+}
+
+.card-body4{
+    background-image: url("../assets/images/europe.jpg");
+    height: 60vh;
+    color: white;
+    background-size: cover;
+}

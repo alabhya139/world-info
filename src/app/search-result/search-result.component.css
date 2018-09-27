@@ -1,0 +1,66 @@
+h1{
+    text-align: center;
+    color: rgb(0, 152, 223);
+    font-size: 16vmin;
+}
+
+.card-bg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40vh;
+    background-image: url('../assets/images/search.png');
+    margin-bottom: 6rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    display: flex;
+    margin: 2vmin;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.cards{
+    display: flex;
+    align-items: stretch;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.bg{
+    background: url('../assets/images/map.png');
+}
+
+@media only screen and (max-width:1023px){
+    h1{
+        font-size: 10vmin;
+        color: brown;
+    }
+
+    .card-bg{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

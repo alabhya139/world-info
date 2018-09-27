@@ -1,0 +1,111 @@
+<div *ngFor="let con of country" class="container">
+    <img *ngIf="name==con.name" class="cover-img shadow-lg" src="{{con.flag}}" alt="{{country.name}}">
+    <ul *ngIf="name==con.name" class="list-group">
+        <h1 class="title">{{con.name | uppercase}}</h1>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>Capital</span>
+          {{con.capital}}
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>Native Name</span>
+          {{con.nativeName}}
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Population</span>
+            {{con.population}}
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Latitude</span>
+            {{con.latlng[0]}}
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Longitude</span>
+            {{con.latlng[1]}}
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Region</span>
+            {{con.region}}
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Sub Region</span>
+            {{con.subregion}}
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Numeric Code</span>
+            {{con.numericCode}}
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Area</span>
+            {{con.area+" Km sq"}}
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Top Level Domain</span>
+            {{con.topLevelDomain}}
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Alpha3 Code</span>
+            {{con.alpha3Code}}
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Alpha2 Code</span>
+            {{con.alpha2Code}}
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Demonym</span>
+            {{con.demonym}}
+        </li>
+        <h4 *ngIf="!isNull(con.borders)" class="text-center margin"><span style="padding:12px;" class="sect shadow-lg">Borders</span></h4>
+        <li *ngIf="!isNull(con.borders)" class="arrdiv list-group-item">
+            <div class="border border-white text-color" *ngFor="let border of con.borders">{{border}}</div>
+        </li>
+
+        <h4 class="text-center margin"><span style="padding:12px;" class="sect shadow-lg">Languages</span></h4>
+        <li class="arrdiv list-group-item">
+            <span>Name</span>
+            <div class="border border-white text-color" *ngFor="let language of con.languages">
+                <a [routerLink]="['/lang',language.iso639_1]">{{language.name}}</a>
+            </div>
+        </li>
+        <li class="arrdiv list-group-item">
+            <span>Native Name</span>
+            <div class="border border-white text-color" *ngFor="let language of con.languages">
+                <a [routerLink]="['/lang',language.iso639_1]">{{language.name}}</a>
+            </div>
+        </li>
+        <h4 class="text-center margin"><span style="padding:12px;" class="sect shadow-lg">Currencies</span></h4>
+        <li class="arrdiv list-group-item">
+            <span>Name</span>
+            <div class="border border-white text-color" *ngFor="let currency of con.currencies">
+              <a [routerLink]="['/currency',currency.code]">{{currency.name}}</a></div>
+        </li>
+        <li class="arrdiv list-group-item">
+            <span>Symbol</span>
+            <div class="border border-white text-color" *ngFor="let currency of con.currencies">{{currency.symbol}}</div>
+        </li>
+        <li class="arrdiv list-group-item">
+            <span>Code</span>
+            <div class="border border-white text-color" *ngFor="let currency of con.currencies">
+                <a [routerLink]="['/currency',currency.code]">{{currency.code}}</a>
+            </div>
+        </li>
+        <h4 *ngIf="isNull(con.regionalBlocs)==false" class="text-center margin"><span style="padding:12px;" class="sect shadow-lg">Regional Blocs</span></h4>
+        <li *ngIf="isNull(con.regionalBlocs)==false" class="arrdiv list-group-item">
+            <span>Acronym</span>
+            <div class="border border-white text-color" *ngFor="let rbloc of con.regionalBlocs">{{rbloc.acronym}}</div>
+        </li>
+        <li *ngIf="isNull(con.regionalBlocs)==false" class="arrdiv list-group-item">
+            <span>Name</span>
+            <div class="border border-white text-color" *ngFor="let rbloc of con.regionalBlocs">{{rbloc.name}}</div>
+        </li>
+
+      </ul>
+</div>
+
+<button style="margin: 8px;" class="btn btn-dark" (click)="back()">Back</button>
+
+<ngx-spinner
+        bdColor="rgba(51,51,51,0.8)"
+        color="#fff"
+        type="square-jelly-box">
+        <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>

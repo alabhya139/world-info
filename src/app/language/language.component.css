@@ -1,0 +1,44 @@
+h1{
+    text-align: center;
+    color: rgb(0, 152, 223);
+    font-size: 20vmin;
+}
+
+.card-bg{
+    height: 40vh;
+    background-image: url('../assets/images/map.png');
+    margin-bottom: 6rem;
+    background-size: contain;
+}
+
+.cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    display: flex;
+    margin: 2vmin;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.cards{
+    display: flex;
+    align-items: stretch;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

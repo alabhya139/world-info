@@ -1,0 +1,32 @@
+
+<div class="card-bg text-center shadow-lg">
+        <div class="card-body">
+          <h1 class="card-title">{{curr}}</h1>
+        </div>
+</div>
+<p style="color:grey;text-align:center">*Below are the results having currency filter applied for <span>{{curr}}</span></p>
+<div class="container-fluid cont">
+    <div *ngFor="let country of countries" class="cards">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src={{country.flag}} alt="Card image cap">
+            <ul class="lis list-group list-group-flush">
+              <li style="text-align:center;" class="list-group-item">{{country?.name}}</li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span>Capital</span>{{country?.capital}}</li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span>Population</span>{{country?.population}}</li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span>Time Zone</span>{{country?.timezones[0]}}</li>
+            </ul>
+            <div class="card-body">
+                <a [routerLink]="['/name',country.name]" class="btn btn-primary">View Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button style="margin: 8px;" class="btn btn-dark" (click)="back()">Back</button>
+
+<ngx-spinner
+        bdColor="rgba(51,51,51,0.8)"
+        color="#fff"
+        type="square-jelly-box">
+        <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
