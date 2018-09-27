@@ -12,6 +12,7 @@ import { Location } from '@angular/common'
 export class SearchResultComponent implements OnInit {
   public countries:any;
   public name;
+  public p;
 
   constructor(private route:ActivatedRoute,private http:HttpService, private spinner:NgxSpinnerService,private location:Location,private router: Router) { }
 

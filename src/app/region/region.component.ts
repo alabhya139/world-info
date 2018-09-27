@@ -12,7 +12,7 @@ import { Location } from '@angular/common'
 export class RegionComponent implements OnInit {
   public countries:any
   public region:string
-
+  public p
   constructor(private route:ActivatedRoute,private router:Router, private http:HttpService,private spinner:NgxSpinnerService,private location:Location) { }
 
   ngOnInit() {
